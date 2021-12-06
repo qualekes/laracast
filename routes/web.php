@@ -20,11 +20,12 @@ Route::get('/', function () {
 
 Route::get('posts/{post}', function ($slug) {
 
+    $path = __DIR__ . "/../resources/posts/{$slug}.html";
 
 
 
 
-    $post = file_get_contents(__DIR__ . "/../resources/posts/{$slug}.html");
+    $post = file_get_contents($path);
 
 
 
